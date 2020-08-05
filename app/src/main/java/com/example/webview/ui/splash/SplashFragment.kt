@@ -11,11 +11,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.webview.R
 
 class SplashFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = SplashFragment()
-    }
-
     private lateinit var viewModel: SplashViewModel
 
     override fun onCreateView(

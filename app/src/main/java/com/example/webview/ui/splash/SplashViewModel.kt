@@ -1,7 +1,7 @@
 package com.example.webview.ui.splash
 
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 
-class SplashViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+class SplashViewModel(application: Application) : AndroidViewModel(application) {
 }

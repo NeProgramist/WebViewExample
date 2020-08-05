@@ -9,11 +9,11 @@ class LocalLinkDataSource(
     context: Context
 ): DataSource {
     private val preference = PreferenceManager.getDefaultSharedPreferences(context)
+
     override fun getLinks() {
     }
 
     override fun saveLink(name: String, link: String) {
-        TODO("Not yet implemented")
     }
 
 }
