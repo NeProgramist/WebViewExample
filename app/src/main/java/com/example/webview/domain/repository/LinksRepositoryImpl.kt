@@ -1,6 +1,7 @@
-package com.example.webview.framework.datasource.remote
+package com.example.webview.domain.repository
 
 import com.example.webview.data.DataSource
+import com.example.webview.domain.repository.LinksRepository
 
 class LinksRepositoryImpl(
     private val local: DataSource,

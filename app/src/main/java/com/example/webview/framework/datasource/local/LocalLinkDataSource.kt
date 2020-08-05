@@ -10,10 +10,15 @@ class LocalLinkDataSource(
 ): DataSource {
     private val preference = PreferenceManager.getDefaultSharedPreferences(context)
 
-    override fun getLinks() {
+    override fun getLinks(name: String) {
+
     }
 
     override fun saveLink(name: String, link: String) {
+        preference
+            .edit()
+            .putString(name, link)
+            .apply()
     }
 
 }
