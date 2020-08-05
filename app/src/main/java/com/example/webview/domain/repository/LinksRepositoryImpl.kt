@@ -1,16 +1,17 @@
 package com.example.webview.domain.repository
 
-import com.example.webview.data.DataSource
-import com.example.webview.domain.repository.LinksRepository
+import com.example.webview.data.LocalDataSource
+import com.example.webview.data.RemoteDataSource
 
 class LinksRepositoryImpl(
-    private val local: DataSource,
-    private val remote: DataSource
+    private val local: LocalDataSource,
+    private val remote: RemoteDataSource
 ): LinksRepository {
     override fun getLinks() {
-        val local = local.getLinks()
+        val local = local.getLink("")
         if (local == null) {
             val remote = remote.getLinks()
+
         }
     }
 

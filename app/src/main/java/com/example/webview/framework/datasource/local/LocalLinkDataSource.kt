@@ -1,16 +1,15 @@
 package com.example.webview.framework.datasource.local
 
-import android.app.Application
 import android.content.Context
 import androidx.preference.PreferenceManager
-import com.example.webview.data.DataSource
+import com.example.webview.data.LocalDataSource
 
 class LocalLinkDataSource(
     context: Context
-): DataSource {
+): LocalDataSource {
     private val preference = PreferenceManager.getDefaultSharedPreferences(context)
 
-    override fun getLinks(name: String) {
+    override fun getLink(name: String) {
 
     }
 
@@ -20,5 +19,4 @@ class LocalLinkDataSource(
             .putString(name, link)
             .apply()
     }
-
 }
