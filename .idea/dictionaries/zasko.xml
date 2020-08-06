@@ -3,6 +3,7 @@
     <words>
       <w>gson</w>
       <w>okhttp</w>
+      <w>rxandroid</w>
       <w>rxjava</w>
     </words>
   </dictionary>

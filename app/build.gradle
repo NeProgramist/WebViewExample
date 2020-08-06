@@ -49,6 +49,10 @@ dependencies {
     def rxjava_version = "3.0.5"
     implementation "io.reactivex.rxjava3:rxjava:$rxjava_version"
 
+    //rxandroid
+    def rxandroid_version = "3.0.0"
+    implementation "io.reactivex.rxjava3:rxandroid:$rxandroid_version"
+
     //gson
     def gson_version = "2.8.6"
     implementation "com.google.code.gson:gson:$gson_version"
