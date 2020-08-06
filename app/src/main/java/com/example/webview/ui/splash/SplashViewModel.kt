@@ -24,8 +24,8 @@ class SplashViewModel(application: Application) : AndroidViewModel(application) 
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe (
-                { link.value = it; Log.e("asdfasdf", "here") },
-                { Log.e("asdfasdf", "An error occurred - $it") }
+                { link.value = it },
+                { println("An error occurred - $it") }
             )
     }
 }

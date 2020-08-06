@@ -18,5 +18,9 @@
         android:id="@+id/webViewFragment"
         android:name="com.example.webview.ui.main.WebViewFragment"
         android:label="web_view_fragment"
-        tools:layout="@layout/web_view_fragment" />
+        tools:layout="@layout/web_view_fragment">
+        <argument
+            android:name="link"
+            app:argType="string" />
+    </fragment>
 </navigation>

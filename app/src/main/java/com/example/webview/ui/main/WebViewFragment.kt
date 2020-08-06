@@ -1,23 +1,20 @@
 package com.example.webview.ui.main
 
-import androidx.lifecycle.ViewModelProviders
+import android.os.Build
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
-
+import android.webkit.WebChromeClient
+import android.webkit.WebSettings
+import android.webkit.WebViewClient
+import androidx.fragment.app.Fragment
 import com.example.webview.R
+import kotlinx.android.synthetic.main.web_view_fragment.*
 
 class WebViewFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = WebViewFragment()
-    }
-
-    private lateinit var viewModel: WebViewViewModel
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,8 +24,16 @@ class WebViewFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(WebViewViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
 
+        val link = arguments?.getString("link")
+        with(webview) {
+            setLayerType(View.LAYER_TYPE_HARDWARE, null);
+            webChromeClient = WebChromeClient()
+            webViewClient = WebViewClient()
+            settings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK;
+            settings.setAppCacheEnabled(true)
+            settings.setJavaScriptEnabled(true);
+            loadUrl(link)
+        }
+    }
 }
