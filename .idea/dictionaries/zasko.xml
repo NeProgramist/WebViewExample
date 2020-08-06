@@ -1,7 +1,9 @@
 <component name="ProjectDictionaryState">
   <dictionary name="zasko">
     <words>
+      <w>gson</w>
       <w>okhttp</w>
+      <w>rxjava</w>
     </words>
   </dictionary>
 </component>
